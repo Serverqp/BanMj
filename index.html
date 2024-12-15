@@ -1,773 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>قالب بوت استرپ آویلون</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>محمدجواد جاودانفرد</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,700|Titillium+Web:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js">
+		
+		.myket-btn {
+            position: fixed;
+            top: 20px; /* فاصله از بالای صفحه */
+            left: 20px; /* فاصله از سمت چپ صفحه */
+            z-index: 1000; /* اولویت نمایش بالاتر از سایر محتوا */
+        }
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+        .myket-btn a img {
+            width: 100px; /* اندازه تصویر */
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px; /* گوشه‌های دکمه گرد شود */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* سایه برای دکمه */
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+        .myket-btn a img:hover {
+            transform: scale(1.1); /* بزرگ شدن هنگام هاور */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* سایه قوی‌تر هنگام هاور */
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-
+	</script>
 </head>
-
-<body>
-
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">آویلون</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""></a> -->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">صفحه اصلی</a></li>
-          <li><a href="#about">درباره ما</a></li>
-          <li><a href="#features">امکانات</a></li>
-          <li><a href="#pricing">قیمت ها</a></li>
-          <li><a href="#team">تیم ما</a></li>
-          <li><a href="#gallery">گالری تصاویر</a></li>
-          <li class="menu-has-children"><a href="">لیست باز شونده</a>
-            <ul>
-              <li><a href="#">گزینه اول</a></li>
-              <li class="menu-has-children"><a href="#">گزینه دوم</a>
-                <ul>
-                  <li><a href="#">زیر گزینه اول</a></li>
-                  <li><a href="#">زیر گزینه دوم</a></li>
-                  <li><a href="#">زیر گزینه سوم</a></li>
-                  <li><a href="#">زیر گزینه چهارم</a></li>
-                  <li><a href="#">زیر گزینه پنجم</a></li>
-                </ul>
-              </li>
-              <li><a href="#">گزینه سوم</a></li>
-              <li><a href="#">گزینه چهارم</a></li>
-              <li><a href="#">گزینه پنجم</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">تماس با ما</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-
-    <div class="intro-text">
-      <h2>به آویلون خوش آمدید</h2>
-      <p>ما تیمی از طراحان با استعداد هستیم که با Bootstrap وب سایت می سازیم</p>
-      <a href="#about" class="btn-get-started scrollto">بریم برای شروع</a>
-    </div>
-
-    <div class="product-screens">
-
-      <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
-        <img src="img/product-screen-1.png" alt="">
-      </div>
-
-      <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
-        <img src="img/product-screen-2.png" alt="">
-      </div>
-
-      <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
-        <img src="img/product-screen-3.png" alt="">
-      </div>
-
-    </div>
-
-  </section><!-- #intro -->
-
-  <main id="main">
-
-    <!--==========================
-      About Us Section
-    ============================-->
-    <section id="about" class="section-bg">
-      <div class="container-fluid">
-        <div class="section-header">
-          <h3 class="section-title">درباره ما</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است <br>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 about-img wow fadeInLeft">
-            <img src="img/about-img.jpg" alt="">
-          </div>
-
-          <div class="col-lg-6 content wow fadeInRight tar">
-            <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </h2>
-            <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-            </p>
-
-            <ul>
-              <li>  <i class="ion-android-checkmark-circle"></i>&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-              <li>  <i class="ion-android-checkmark-circle"></i>&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-              <li>  <i class="ion-android-checkmark-circle"></i>&nbsp; لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </li>
-            </ul>
-
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      Product Featuress Section
-    ============================-->
-    <section id="features">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-8 offset-lg-4">
-            <div class="section-header wow fadeIn" data-wow-duration="1s">
-              <h3 class="section-title">امکانات محصول</h3>
-              <span class="section-divider"></span>
+<body class="is-boxed">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+			<div class="hero-disk hero-disk-1 is-moving-object is-translating" data-translating-factor="60">
+				<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+				    <defs>
+				        <linearGradient x1="-1.265%" y1="100%" y2="100%" id="disk-1-a">
+				            <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+				            <stop stop-color="#3217BB" offset="100%"/>
+				        </linearGradient>
+				    </defs>
+				    <path d="M846 515c0-165.685 134.315-300 300-300s300 134.315 300 300h-150c0-82.843-67.157-150-150-150s-150 67.157-150 150H846z" transform="translate(-846 -215)" fill="url(#disk-1-a)" fill-rule="evenodd"/>
+				</svg>
+			</div>
+			<div class="hero-disk hero-disk-2 is-moving-object is-translating" data-translating-factor="20">
+				<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+				    <defs>
+				        <linearGradient x1="0%" y1="100%" y2="100%" id="disk-2-a">
+				            <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+				            <stop stop-color="#D15680" offset="100%"/>
+				        </linearGradient>
+				    </defs>
+				    <path d="M1153 63c0 165.685-134.315 300-300 300S553 228.685 553 63h150c0 82.843 67.157 150 150 150s150-67.157 150-150h150z" transform="translate(-553 -63)" fill="url(#disk-2-a)" fill-rule="evenodd"/>
+				</svg>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-5 features-img">
-            <img src="img/product-features.png" alt="" class="wow fadeInLeft">
-          </div>
-
-          <div class="col-lg-8 col-md-7 ">
-
-            <div class="row">
-
-              <div class="col-lg-6 col-md-6 box wow fadeInRight">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="">سرعت اجرای بالا</a></h4>
-                <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              </div>
-              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
-                <div class="icon"><i class="ion-ios-flask-outline"></i></div>
-                <h4 class="title"><a href="">کیفیت بالا</a></h4>
-                <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              </div>
-              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
-                <div class="icon"><i class="ion-social-buffer-outline"></i></div>
-                <h4 class="title"><a href="">چند لایه بودن</a></h4>
-                <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              </div>
-              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
-                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                <h4 class="title"><a href="">بهیته بودن</a></h4>
-                <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- #features -->
-
-    <!--==========================
-      Product Advanced Featuress Section
-    ============================-->
-    <section id="advanced-features">
-
-      <div class="features-row section-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-1.jpg" alt="">
-              <div class="wow fadeInLeft">
-                <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  </h2>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است  </h3>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="features-row">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt="">
-              <div class="wow fadeInRight">
-                <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </h2>
-                <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                <p class="wow fadeInRight" data-wow-duration="0.5s">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
-                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="features-row section-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-3.jpg" alt="">
-              <div class="wow fadeInLeft">
-                <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </h2>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </h3>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                <i class="ion-ios-albums-outline"></i>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- #advanced-features -->
-
-    <!--==========================
-      Call To Action Section
-    ============================-->
-    <section id="call-to-action">
-      <div class="container">
-        <div class="row tar">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">فراخوانی برای اقدام</h3>
-            <p class="cta-text"> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">فراخوانی برای اقدام</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #call-to-action -->
-
-    <!--==========================
-      More Features Section
-    ============================-->
-    <section id="more-features" class="section-bg">
-      <div class="container">
-
-        <div class="section-header">
-          <h3 class="section-title">امکانات بیشتر</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft">
-              <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
-              <h4 class="title"><a href="">لورم ایپسوم متن</a></h4>
-              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight">
-              <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-              <h4 class="title"><a href="">لورم ایپسوم</a></h4>
-              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft">
-              <div class="icon"><i class="ion-ios-heart-outline"></i></div>
-              <h4 class="title"><a href="">اما همانطور که مشاهده می کنید</a></h4>
-              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight">
-              <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-              <h4 class="title"><a href="">مشکلات</a></h4>
-              <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #more-features -->
-
-    <!--==========================
-      Clients
-    ============================-->
-    <section id="clients">
-      <div class="container">
-
-        <div class="row wow fadeInUp">
-
-          <div class="col-md-2">
-            <img src="img/clients/client-1.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-2.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-3.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-4.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-5.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-6.png" alt="">
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #more-features -->
-
-    <!--==========================
-      Pricing Section
-    ============================-->
-    <section id="pricing" class="section-bg">
-      <div class="container">
-
-        <div class="section-header">
-          <h3 class="section-title">تعرفه ها</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box wow fadeInLeft">
-              <h3>رایگان</h3>
-              <h4>0<sup>تومان</sup><span> ماهیانه</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-              </ul>
-              <a href="#" class="get-started-btn">فعال سازی</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box featured wow fadeInUp">
-              <h3>تجاری</h3>
-              <h4>638,000<sup>تومن</sup><span> ماهیانه</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i>  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-              </ul>
-              <a href="#" class="get-started-btn">فعال سازی</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box wow fadeInRight">
-              <h3>حرفه ای</h3>
-              <h4><sup>تومان</sup>1,078,000<span> ماهیانه</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-                <li><i class="ion-android-checkmark-circle"></i>   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </li>
-              </ul>
-              <a href="#" class="get-started-btn">فعال سازی</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #pricing -->
-
-
-    <!--==========================
-      Frequently Asked Questions Section
-    ============================-->
-    <section id="faq">
-      <div class="container">
-
-        <div class="section-header">
-          <h3 class="section-title">سوالات متداول</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
-        </div>
-
-        <ul id="faq-list" class="wow fadeInUp">
-          <li>
-            <a data-toggle="collapse" class="collapsed" href="#faq1">برای ثبت نام در سایت چه کاری باید انجام داد ؟ <i class="ion-android-remove"></i></a>
-            <div id="faq1" class="collapse" data-parent="#faq-list">
-              <p>
-                در قسمت ثبت نام اولیه پس از ورود شماره موبایل و ایمیل و کد امنیتی با فشردن دکمه فعالسازی منتظر دریافت کد تایید بر روی تلفن همراه خود بوده و با دریافت کد در مرحله ورود کد تایید به مراحل ثبت نام ورود می کنید .
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq2" class="collapsed">در صورت دریافت نکردن کد تایید چه باید کرد ؟  <i class="ion-android-remove"></i></a>
-            <div id="faq2" class="collapse" data-parent="#faq-list">
-              <p>
-                در مرحله ورود کد تایید پس از ورود کد امنیتی دکمه ارسال مجدد را فشرده و منتظر دریافت کد بر روی تلفن همراه خود بمانید .
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq3" class="collapsed">در صورت عدم دریافت کد تایید حتی پس از درخواست ارسال مجدد کد چه باید کرد ؟  <i class="ion-android-remove"></i></a>
-            <div id="faq3" class="collapse" data-parent="#faq-list">
-              <p>
-                با بازگشت به مرحله ثبت نام اولیه در صفحه ثبت نام در ورود شماره تماس خود دقت بیشتری بفرمایید .
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq4" class="collapsed">در صورت نیاز به ویرایش اطلاعات خود باید چه کنیم؟ <i class="ion-android-remove"></i></a>
-            <div id="faq4" class="collapse" data-parent="#faq-list">
-              <p>
-                شما می توانید بعد از ورود به سایت به ویرایش اطلاعات خود اقدام نمایید.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq5" class="collapsed">مراحل راه اندازی وب سایت چیست؟ <i class="ion-android-remove"></i></a>
-            <div id="faq5" class="collapse" data-parent="#faq-list">
-              <p>
-                تحلیل و مشاوره در خصوص انتخاب امکانات مورد نیاز برای وب سایت
-                انتخاب نام مناسب برای سایت
-                عقد قرار داد و دریافت پیش پرداخت
-                ثبت دامنه (نام سایت) Domain Registration
-                دریافت اطلاعات اولیه و نظرات شما در خصوص نوع طراحی
-                انجام مراحل طراحی گرافیکی قالب و ظاهر سایت
-                تائید طرح توسط شما
-                ایجاد استراتژی از عملکرد سایت
-                ورود اطلاعات اولیه وب سایت(اطلاعات نمونه)
-                طراحی صفحات بر اساس آخرین استانداردها
-                اختصاص فضای اینترنتی (هاستینگ) Hosting
-                بارگذاری سایت طراحی شده بر روی فضای اینترنت
-                تحویل و آموزش وب سایت در محل شرکت
-                دریافت با ماباقی مبلغ قرارداد
-                شروع پشتیبانی یکساله وب سایت ( شامل آپدیت های نرم افزاری - برطرف کردن اشکالات احتمالی و فنی وب سایت )
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq6" class="collapsed">منظور از پهنای باند چیست؟ <i class="ion-android-remove"></i></a>
-            <div id="faq6" class="collapse" data-parent="#faq-list">
-              <p>
-                پهنای باند در واقع میزان اطلاعاتی است که در طول ماه توسط سایت شما می تواند رد وبدل شود مثلا فرض کنید شما یک فایل ۱ مگابایتی رار روی سایت خود قرار دهبد و پهنای باند ماهیانه ی سایت شما ۲۰ گیگا بایت می باشد . در این صورت این فایل ۱ مگابایتی در طول ماه ۲۰۰۰۰ بار می تواند توسط افراد در اینترنت دانلود شود.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section><!-- #faq -->
-
-    <!--==========================
-      Our Team Section
-    ============================-->
-    <section id="team" class="section-bg">
-      <div class="container">
-        <div class="section-header">
-          <h3 class="section-title">تیم ما</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
-        </div>
-        <div class="row wow fadeInUp">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-1.jpg" alt=""></div>
-              <h4>متین روحانی</h4>
-              <span>مدیر اجرایی</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-2.jpg" alt=""></div>
-              <h4>یسنا جنتی</h4>
-              <span>مدیر تولید</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-3.jpg" alt=""></div>
-              <h4>ابوالفضل جهانبخش</h4>
-              <span>مدیر ارشد فناوری</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-4.jpg" alt=""></div>
-              <h4>اسرا جهان‌بخش</h4>
-              <span>حسابدار</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #team -->
-
-    <!--==========================
-      Gallery Section
-    ============================-->
-    <section id="gallery">
-      <div class="container-fluid">
-        <div class="section-header">
-          <h3 class="section-title">گالری تصاویر</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-1.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-1.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-2.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-2.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-3.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-3.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-4.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-4.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-5.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-5.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item wow fadeInUp">
-              <a href="img/gallery/gallery-6.jpg" class="gallery-popup">
-                <img src="img/gallery/gallery-6.jpg" alt="">
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #gallery -->
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact">
-      <div class="container">
-        <div class="row wow fadeInUp">
-
-          <div class="col-lg-4 col-md-4">
-            <div class="contact-about">
-              <h3>آویلون</h3>
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="info">
-              <div>
-                <i class="ion-ios-location-outline"></i>
-                <p>فارس - جهرم<br>خیابان ____ پلاک ___ </p>
-              </div>
-
-              <div>
-                <i class="ion-ios-email-outline"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="ion-ios-telephone-outline"></i>
-                <p>+989123456789</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-5 col-md-8">
-            <div class="form">
-              <div id="sendmessage">پیام شما ارسال شد، متشکرم!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="نام و نام خانوادگی" data-rule="minlen:4" data-msg="باید حداقل از 4 کاراکتر تشکیل شده باشد" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="آدرس ایمیل" data-rule="email" data-msg="لطفا آدرس ایمیل خود را وارد کنید" />
-                    <div class="validation"></div>
-                  </div>
+			<div class="hero-sphere hero-sphere-1 is-moving-object is-translating" data-translating-factor="10">
+				<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+				    <defs>
+				        <radialGradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-1-a">
+				            <stop stop-color="#D15680" offset="0%"/>
+				            <stop stop-color="#040404" stop-opacity="0" offset="100%"/>
+				        </radialGradient>
+				    </defs>
+				    <circle cx="1522" cy="447" r="24" transform="translate(-1498 -423)" fill="url(#sphere-1-a)" fill-rule="evenodd"/>
+				</svg>
+			</div>
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+									<title>Florence</title>
+								    <defs>
+								        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
+								            <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+								            <stop stop-color="#FFF" offset="100%"/>
+								        </linearGradient>
+								        <linearGradient x1="21.021%" y1="8.197%" y2="50%" id="logo-b">
+								            <stop stop-color="#3217BB" offset="0%"/>
+								            <stop stop-color="#D15680" offset="100%"/>
+								        </linearGradient>
+								    </defs>
+								    <g fill="none" fill-rule="evenodd">
+								        <path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-a)"/>
+								        <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)"/>
+								    </g>
+								</svg>
+                            </a>
+                        </h1>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع" data-rule="minlen:4" data-msg="لطفا یک موضوع حداقل 8 کاراکتری وارد کنید" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="لطفا ابتدا پیامی که میخواهید برای ما ارسال شود را بنویسید" placeholder="متن پیام"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit" title="ارسال پیام">ارسال پیام</button></div>
-              </form>
             </div>
-          </div>
+        </header>
 
-        </div>
+        <main>
+            <section class="hero text-center">
+				<div class="hero-disk hero-disk-3 is-moving-object is-translating" data-translating-factor="90">
+					<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient x1="100%" y1="100%" x2="-1.265%" y2="100%" id="disk-3-a">
+								<stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+								<stop stop-color="#3217BB" offset="100%"/>
+							</linearGradient>
+						</defs>
+						<path d="M153 492c0-165.685 134.315-300 300-300s300 134.315 300 300H603c0-82.843-67.157-150-150-150s-150 67.157-150 150H153z" transform="translate(-153 -192)" fill="url(#disk-3-a)" fill-rule="evenodd"/>
+					</svg>
+				</div>
+				<div class="hero-disk hero-disk-4 is-moving-object is-translating" data-translating-factor="50">
+					<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+					    <defs>
+					        <linearGradient x1="0%" y1="100%" y2="100%" id="disk-4-a">
+					            <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+					            <stop stop-color="#D15680" offset="100%"/>
+					        </linearGradient>
+					    </defs>
+					    <path d="M817 687c0 165.685-134.315 300-300 300S217 852.685 217 687h150c0 82.843 67.157 150 150 150s150-67.157 150-150h150z" transform="translate(-217 -687)" fill="url(#disk-4-a)" fill-rule="evenodd"/>
+					</svg>
+				</div>
+				<div class="hero-sphere hero-sphere-2 is-moving-object is-translating" data-translating-factor="30">
+					<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+					    <defs>
+					        <radialGradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-2-a">
+					            <stop stop-color="#3217BB" offset="0%"/>
+					            <stop stop-color="#040404" stop-opacity="0" offset="100%"/>
+					        </radialGradient>
+					    </defs>
+					    <circle cx="251" cy="433" r="16" transform="translate(-235 -417)" fill="url(#sphere-2-a)" fill-rule="evenodd"/>
+					</svg>
+				</div>
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <h1 class="hero-title mt-0 is-revealing">چطور میتونم کمکتون کنم؟</h1>
+                        <p class="hero-paragraph is-revealing">  من محمدجواد جاودانفرد هستم و همیشه درحال لولیدن هستم و همچنین میتونید با من در شبکات اجتماعی 
+			 در ارتباط باشید
+                            <a class="button button-primary button-shadow" href="https://serverqp.github.io/EnterAi/" target="_blank">سایت زندگی نامه من</a>
+                        </div>
+                        <div class="hero-browser">
+							<img src="https://raw.githubusercontent.com/Serverqp/EnterAi/main/MGH_3613-1080X720_edit_8695612847109.jpeg" alt="زندگی‌نامه" width="800" height="450">
+							    <defs>
+							        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="browser-a">
+							            <stop stop-color="#474452" offset="0%"/>
+							            <stop stop-color="#363342" offset="100%"/>
+							        </linearGradient>
+							        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="browser-b">
+							            <stop stop-color="#302D3B" stop-opacity=".24" offset="0%"/>
+							            <stop stop-color="#302D3B" offset="100%"/>
+							        </linearGradient>
+							        <linearGradient x1="100%" y1="-12.816%" x2="0%" y2="-12.816%" id="browser-c">
+							            <stop stop-color="#5A5667" stop-opacity="0" offset="0%"/>
+							            <stop stop-color="#5A5667" offset="50.045%"/>
+							            <stop stop-color="#5A5667" stop-opacity="0" offset="100%"/>
+							        </linearGradient>
+							    </defs>
+							    <g fill="none" fill-rule="evenodd">
+							        <rect fill="url(#browser-a)" width="800" height="450" rx="4"/>
+							        <path fill="url(#browser-b)" d="M60 82h122v320H60zM213 82h1v320h-1zM399 82h1v320h-1zM585 82h1v320h-1zM246 82h122v320H246zM432 82h122v320H432zM618 82h122v320H618z"/>
+							        <circle fill="#D15680" cx="24" cy="16" r="4"/>
+							        <circle fill="#F2D084" cx="40" cy="16" r="4"/>
+							        <circle fill="#84F293" cx="56" cy="16" r="4"/>
+							        <path fill="#5D5B6E" d="M756 14h24v4h-24z"/>
+							        <path fill="url(#browser-c)" d="M47 32h706v2H47z"/>
+							    </g>
+							</svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      </div>
-    </section><!-- #contact -->
+            <section class="features section text-center">
+                <div class="container-sm">
+                    <div class="features-inner section-inner has-bottom-divider">
+                        <div class="features-wrap">
+                            <div class="feature">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="16.65%" y1="87.231%" x2="90.35%" y2="8.197%" id="feature-1-a">
+										            <stop stop-color="#3217BB" offset="0%"/>
+										            <stop stop-color="#D15680" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="feature-1-b">
+										            <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+										            <stop stop-color="#FFF" stop-opacity=".24" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path fill="url(#feature-1-a)" d="M64 32v32H32V32H0V0h32v32z"/>
+										        <path fill="url(#feature-1-b)" d="M16 16h32v32H16z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">آیدی من در ایتا</h3>
+                                    <p class="text-sm">@q_Title_p میتونید به آیدی من در ایتا پیام بدید</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="16.65%" y1="87.231%" x2="90.35%" y2="8.197%" id="feature-2-a">
+										            <stop stop-color="#3217BB" offset="0%"/>
+										            <stop stop-color="#D15680" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="feature-2-b">
+										            <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+										            <stop stop-color="#FFF" stop-opacity=".24" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M32 64C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32zm0-16c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16z" fill="url(#feature-2-a)"/>
+										        <path fill="url(#feature-2-b)" d="M0 0h32v32H0z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">شماره همراه من</h3>
+                                    <p class="text-sm">میتونید با من تماس بگیرید در اینجا شماره من هست 09154121749</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="feature-3-a">
+										            <stop stop-color="#3217BB" offset="0%"/>
+										            <stop stop-color="#D15680" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M0 32h32V0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32z" fill="url(#feature-3-a)"/>
+										        <path fill-opacity=".32" fill="#FFF" d="M32 32h32v32H32z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">دیدار حضوری</h3>
+                                    <p class="text-sm">میتونید من رو در مشهد ملاقات کنید ولی قبلش حتما تماس بگیرید</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="feature-4-a">
+										            <stop stop-color="#3217BB" offset="0%"/>
+										            <stop stop-color="#D15680" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M64 32H32V0c17.673 0 32 14.327 32 32z" fill="url(#feature-4-a)"/>
+										        <path d="M32 64H0V32c17.673 0 32 14.327 32 32z" fill="url(#feature-4-a)" transform="rotate(180 16 48)"/>
+										        <path fill-opacity=".32" fill="#FFF" d="M16 16h32v32H16z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">به من ایمیل بدید</h3>
+                                    <p class="text-sm">1mohamdjavad1388@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  </main>
+            <section class="cta section">
+				<div class="container-sm">
+					<div class="cta-inner section-inner">
+						<div class="cta-content text-center">
+							<h2 class="section-title mt-0">🌹سلامتی امام زمان 2 دونه صلوات بفرست🌹</h2>
+							<p class="section-paragraph">لطفا بازی منو که در پایین صفحه قرار داره از مایکت دانلود کنید و به سایت تولید محتوای من هم سر بزنید</p>
+							<div class="section-cta">
+								<!-- آدرس لینک را اینجا وارد کنید -->
+								<a class="button button-primary button-shadow" href="https://serverqp.github.io/DarAmad/" target="_blank">
+									 به سایت تولید محتوای من سر بزنید
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>			
+            </section>
+        </main>
 
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright">
-            &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            Designed by <a href="https://iran-layer.com/">Iran Layer</a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">خانه</a>
-            <a href="#about" class="scrollto">درباره ما</a>
-            <a href="#">سیاست حفظ حریم خصوصی</a>
-            <a href="#">تیم ما</a>
-          </nav>
-        </div>
-      </div>
+        <footer class="site-footer">
+			<div class="footer-disk footer-disk-1 is-moving-object is-translating" data-translating-factor="60">
+				<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient x1="100%" y1="100%" x2="-1.265%" y2="100%" id="disk-5-a">
+							<stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+							<stop stop-color="#3217BB" offset="100%"/>
+						</linearGradient>
+					</defs>
+					<path d="M153 492c0-165.685 134.315-300 300-300s300 134.315 300 300H603c0-82.843-67.157-150-150-150s-150 67.157-150 150H153z" transform="translate(-153 -192)" fill="url(#disk-5-a)" fill-rule="evenodd"/>
+				</svg>
+			</div>
+			<div class="footer-disk footer-disk-2 is-moving-object is-translating" data-translating-factor="80">
+				<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient x1="0%" y1="100%" y2="100%" id="disk-6-a">
+							<stop stop-color="#040404" stop-opacity="0" offset="0%"/>
+							<stop stop-color="#D15680" offset="100%"/>
+						</linearGradient>
+					</defs>
+					<path d="M1153 63c0 165.685-134.315 300-300 300S553 228.685 553 63h150c0 82.843 67.157 150 150 150s150-67.157 150-150h150z" transform="translate(-553 -63)" fill="url(#disk-6-a)" fill-rule="evenodd"/>
+				</svg>
+			</div>
+			<div class="footer-sphere footer-sphere-1 is-moving-object is-translating" data-translating-factor="20">
+				<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<radialGradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-3-a">
+							<stop stop-color="#D15680" offset="0%"/>
+							<stop stop-color="#040404" stop-opacity="0" offset="100%"/>
+						</radialGradient>
+					</defs>
+					<circle cx="251" cy="433" r="16" transform="translate(-235 -417)" fill="url(#sphere-3-a)" fill-rule="evenodd"/>
+				</svg>
+			</div>
+            <div class="container">
+                <div class="site-footer-inner has-top-divider">
+                    <div class="brand footer-brand">
+                        <a href="#">
+							<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<title>Florence</title>
+								<defs>
+									<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-footer-a">
+										<stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+										<stop stop-color="#FFF" offset="100%"/>
+									</linearGradient>
+									<linearGradient x1="21.021%" y1="8.197%" y2="50%" id="logo-footer-b">
+										<stop stop-color="#3217BB" offset="0%"/>
+										<stop stop-color="#D15680" offset="100%"/>
+									</linearGradient>
+								</defs>
+								<g fill="none" fill-rule="evenodd">
+									<path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-footer-a)"/>
+									<path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-footer-b)"/>
+								</g>
+							</svg>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="#">همین دیگه</a>
+                        </li>
+                        <li>
+                            <a href="#">میلولم</a>
+                        </li>
+                        <li>
+                            <a href="#">همیشه درحال لولیدن</a>
+                        </li>
+                        <li>
+                            <a href="#">جان ویک مدرسه</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFFFFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Twitter</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFFFFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Google</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#FFFFFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; کلیه حقوق این سایت برای محمدجواد جاودانفرد است</div>
+                </div>
+            </div>
+        </footer>
     </div>
-  </footer><!-- #footer -->
+	<div class="myket-btn">
+        <a href="https://myket.ir/app/com.app.myapp.tNZCgatXex?utm_source=search-ads-gift&utm_medium=cpc" target="_blank">
+            <img src="https://myket.ir/core/images/logo/get1-fa.png" alt="دریافت از مایکت">
+        </a>
+    </div>
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
+    <script src="dist/js/main.min.js"></script>
 </body>
 </html>
